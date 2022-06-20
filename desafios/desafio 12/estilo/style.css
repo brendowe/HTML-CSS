@@ -4,59 +4,95 @@
 @import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
 
 :root {
-    --fonte-texto: 'Sriracha';
-    --fonte-cabeça: 'Passion One';
+    --fonte1: Verdana, Geneva, Tahoma, sans-serif;
+    --fonte2: 'Passion One', cursive;
+    --fonte3: 'Sriracha', cursive;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+html, body {
+    min-height: 100vh;
+    background-color: dark;
+    font-family: var(--fonte1);
 }
 
 header {
-    font-family: var(--fonte-cabeça);
     background-color: black;
     color: white;
     text-align: center;
-    font-size: 60px;
-    font-weight: bold;
-    height: 250px;
 }
 
-header h1 {
-    margin: 0px;
+header > h1 {
     padding-top: 50px;
+    font-variant: small-caps;
+    font-family: var(--fonte2);
+    font-size: 10vw;
 }
 
-header div {
+header > p {
+    padding-bottom: 50px;
+}
+
+header a, footer a {
     color: white;
-    font-size: 8px;
+    text-decoration: none;
+    font-weight: bolder;
 }
 
-body {
-    margin-left: auto;
-    margin-top: 0%;
+header a:hover, footer a:hover {
+    text-decoration: underline;
 }
 
 section {
-    font-family: var(--fonte-texto);
-    font-size: 50px;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    line-height: 2em;
+    padding-left: 30px;
+    font-family: var(--fonte3);
+    font-size: 4.5vw;
 }
 
-#primeira {
+section > p {
+    padding-bottom: 2em;
+}
+
+section.normal {
+    background-color: white;
+    color: black;
+}
+
+section.imagem {
+    background-color: rgb(43, 43, 43);
+    color: white;
+    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.466);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+section.imagem > p {
+    display: inline-block;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+    text-shadow: 1px 1px 0px black;
+}
+
+section#img01 {
     background-image: url(../imagens/background001.jpg);
-    background-attachment: fixed;
-    background-size: cover;
-    color: white;
-    text-shadow: ;
+    background-position: right center;
 }
 
-#quinta {
+section#img02 {
     background-image: url(../imagens/background002.jpg);
-    background-attachment: fixed;
-    background-size: cover;
-    color: white;
+    background-position: right center;
 }
 
-#primeira p {
-    max-width: 550px;
-    border: 10px solid  purple;
-    padding: 35px;
-    box-shadow: 50%;
-
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
 }
